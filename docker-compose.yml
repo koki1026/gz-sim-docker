@@ -3,12 +3,12 @@ version: '3'
 services:
   gz_sim:
     # gazebo installation for the robot
-    image: brean/gz_sim:harmonic-jazzy
+    image: vrx-harmonic:latest
     build:
       context: ./
       dockerfile: ./Dockerfile
       args:
-        ROS_DISTRO: jazzy
+        ROS_DISTRO: humble
         GZ_VERSION: harmonic
     runtime: nvidia
     environment: 
@@ -24,6 +24,7 @@ services:
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix:rw  # for UI
       - /run/user:/run/user:ro  # for UI
+      - ../:/home/koki-22/Her_VRX_docker
     privileged: true  # for UI
     deploy:
       resources:
