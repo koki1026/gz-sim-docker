@@ -25,3 +25,5 @@ docker run -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix:rw --privileged brean/gz_
 ## rebuilding
 To rebuild the docker container call `docker compose build` in this directory, 
 although that is NOT necessary, you can just call `docker compose pull`
+
+i
